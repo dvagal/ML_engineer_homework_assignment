@@ -1,0 +1,54 @@
+Cognoa_ds_lib
+---------------
+
+feature_selection.py
+----------------------
+	input: dataframe  (input columns)
+	output: dataframe with columns 'feature', 'XValid_AUC', 'autism_recall', 'not_recall'
+	Edits:
+		removing the imports of several libraries that are not being used
+		removed both min_severity & max_severity functions and generalized to one function that handles both min & max severities
+		removed the repetition of several lines of count of severity
+	Comment:
+		min_severity function that is present in the code is never used.
+	Bug:
+		Fixed the min_severity column that is previously taking the values of max_severity function
+		
+ds_helper_functions.py
+----------------------
+edits:
+	removing unused imports
+	bringing import lines to the top for readability
+
+
+inconclusive_classifier.py
+--------------------------
+bug fix:
+	fixed the usage of print_classifier_performance_metrics by importing it from ds_helper_functions
+ds_helper_functions
+sklearn_0p18_bridge_code.py
+
+
+
+independent script files (not called by another script):
+--------------------------------------------------------
+v1_video_algorithms.py
+plotting_tools.py
+
+edits:
+removed unused imports in between scripts
+
+ADOS_helper_functions
+ADOSMissingDataInstructions
+
+
+Best practices:
+---------------
+Always keep the lines concerning to importing functions at the top of the code (Readability, Conformance to standards and best practices)
+keep functions seperate, never define & create a function inside a function (Modularity, Reusability & Conformance to standards and best practices)
+
+
+Nice to have features:
+----------------------
+cprofile for performance check, need data to use this
+cpickle for loading/saving the previous versions of python objects for rollback
