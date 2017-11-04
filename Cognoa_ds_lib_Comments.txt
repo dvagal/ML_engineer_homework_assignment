@@ -44,11 +44,13 @@ ADOSMissingDataInstructions
 
 Best practices:
 ---------------
-Always keep the lines concerning to importing functions at the top of the code (Readability, Conformance to standards and best practices)
-keep functions seperate, never define & create a function inside a function (Modularity, Reusability & Conformance to standards and best practices)
+1.Always keep the statements related to import functions at the top of the code (Readability, Conformance to standards and best practices)
+2. keep functions separate, try not to define & create a nested function (function inside a function)  
+3. Always include error handling and exception handling 
 
 
 Nice to have features:
 ----------------------
-cprofile for performance check, need data to use this
-cpickle for loading/saving the previous versions of python objects for rollback
+1. cprofile for performance check, need data to use this
+2. cpickle for loading/saving the previous versions of python objects for rollback
+3. A workflow manager tool like Luigi or Airflow to build an analytics data pipeline end to end and schedule in Production.
